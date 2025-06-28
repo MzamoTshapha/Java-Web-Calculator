@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Mzamo Calculator
-            <link rel="stylesheet" href="style.css">
-        </title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Mzamo Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="InputBox" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td onclick="digitBtnPressed(7)">7</td> 
+            <td onclick="digitBtnPressed(8)">8</td>
+            <td onclick="digitBtnPressed(9)">9</td>
+            <td onclick="operatorBtnPressed('x')">x</td>
+        </tr>
 
-        <script src="script.js"></script>
-    </body>
+        <tr>
+            <td onclick="digitBtnPressed(4)">4</td>
+            <td onclick="digitBtnPressed(5)">5</td>
+            <td onclick="digitBtnPressed(6)">6</td>
+            <td onclick="operatorBtnPressed('-')">-</td>
+        </tr>
+
+        <tr>
+            <td onclick="digitBtnPressed(1)">1</td>
+            <td onclick="digitBtnPressed(2)">2</td>
+            <td onclick="digitBtnPressed(3)">3</td>
+            <td onclick="operatorBtnPressed('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="digitBtnPressed(0)">0</td>
+            <td onclick="buttonACPressed()">AC</td>
+            <td onclick="operatorBtnPressed('/')">/</td>
+        </tr>
+
+        <tr>
+            <td colspan="4" onclick="equalBtnPressed()">=</td>
+        </tr>
+
+    </table>
+
+    <script>
+
+        var newLine = true; // Remove things too prepare for new thing after pressed
+        var value1;
+        var value2; // this will handle the values after equal sign
+        var currentOperator; // stores whatever had been clicked
+
+        function digitBtnPressed(button){
+
+            if(newLine){// Set things to false when we start typing something
+                document.getElementById("InputBox").value = button;
+                newLine = false; // Help to start on new line 
+            }
+
+            else{
+                
+                //This allows you to write on the inputBox
+            var currentValue = document.getElementById("InputBox").value;
+            document.getElementById("InputBox").value = currentValue + button;
 
 
+            }
+
+
+        }
+                //This is the AC button
+        function buttonACPressed(){
+            document.getElementById("InputBox").value = 0;
+            newLine = true;
+        }
+
+        // The event handler for the operators
+        function operatorBtnPressed(operator){
+            currentOperator = operator;
+            value1 = parseInt(document.getElementById("InputBox").value);
+            newLine = true;
+
+        }
+            // Event handler for equal to button
+        function equalBtnPressed(){
+            value2 = parseInt(document.getElementById("InputBox").value);
+            var finalTotal;  // store final total
+
+            switch(currentOperator){
+
+                case"+":
+                finalTotal = value1 + value2
+                break;
+
+                case"-":
+                finalTotal = value1 - value2
+                break;
+
+                case"x":
+                finalTotal = value1 * value2
+                break;
+
+                case"/":
+                finalTotal = value1 / value2
+                break;
+            }
+            document.getElementById("InputBox").value = finalTotal;
+            newLine = true;
+            value1 = 0;
+
+        }
+
+    </script>
+</body>
 </html>
