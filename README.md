@@ -4,7 +4,8 @@
 A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Perfect for basic arithmetic operations with a modern dark-themed UI. **Deployed on GitHub Pages!**
 
 [![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://your-username.github.io/repo-name)
-![Calculator Screenshot](./calculator-screenshot.png) <!-- Replace with actual screenshot -->
+![Mzamo Tshapha JS calculator ](https://github.com/user-attachments/assets/b21d9d11-a9d3-460c-9b2c-65060d891a77)
+
 
 ## Features
 - **Basic operations**: Addition, Subtraction, Multiplication, Division
