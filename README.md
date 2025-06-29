@@ -1,11 +1,10 @@
 # Web-Calculator-Java-script
-
 # 🧮 Mzamo Calculator
 
-A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Perfect for basic arithmetic operations with a modern dark-themed UI.
+A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Perfect for basic arithmetic operations with a modern dark-themed UI. **Deployed on GitHub Pages!**
 
-![Mzamo Tshapha JS calculator ](https://github.com/user-attachments/assets/9ea4c7c6-d3a6-421b-8dc0-abdb0309f879)
-
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://your-username.github.io/repo-name)
+![Calculator Screenshot](./calculator-screenshot.png) <!-- Replace with actual screenshot -->
 
 ## Features
 - **Basic operations**: Addition, Subtraction, Multiplication, Division
@@ -13,32 +12,38 @@ A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Per
 - **Responsive design**: Works on all device sizes
 - **Clean display**: Large, easy-to-read output screen
 - **AC function**: Instant reset with All Clear button
+- **GitHub Pages Hosted**: Fully deployed using GitHub's static site hosting
 
 ## How to Use
+**Live Demo**:  
+[Try it now!](https://your-username.github.io/repo-name) 
+
+**Local Setup**:
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/mzamo-calculator.git
+```bash
+git clone https://github.com/your-username/mzamo-calculator.git
 Open index.html in any modern browser
 
-Perform calculations like:
+Example Calculations:
 
-15 + 7 = → Displays 22
+text
+15 + 7 = → 22
+3 x 6 = → 18
+20 / 5 = → 4
+Deployment Note
+✅ This project is hosted on GitHub Pages which natively supports:
 
-3 x 6 = → Displays 18
+Static HTML files
 
-20 / 5 = → Displays 4
+CSS stylesheets
+
+JavaScript files (embedded in HTML or separate)
+
+No backend/server required
 
 Code Structure
 File	Description
 index.html	Main HTML with embedded JavaScript
 style.css	All styling rules for the calculator
 Customization
-Easily modify colors in style.css:
-
-css
-tr {
-  background-color: #4e494d; /* Change button background */
-}
-#InputBox {
-  color: #fff; /* Change display text color */
-}
+Modify colors in style.css:
